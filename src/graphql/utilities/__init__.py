@@ -25,6 +25,16 @@ from .extend_schema import extend_schema
 # Sort a GraphQLSchema.
 from .lexicographic_sort_schema import lexicographic_sort_schema
 
+# Compose a GraphQL schema from multiple named SDL documents.
+from .compose_sdl import (
+    SdlDocument,
+    ComposeLocation,
+    ComposeIssue,
+    ComposedSchema,
+    ComposeSdlError,
+    compose_sdl,
+)
+
 # Print a GraphQLSchema to GraphQL Schema language.
 from .print_schema import (
     print_schema,
@@ -112,6 +122,10 @@ from .resolve_schema_coordinate import (
 __all__ = [
     "BreakingChange",
     "BreakingChangeType",
+    "ComposeIssue",
+    "ComposeLocation",
+    "ComposeSdlError",
+    "ComposedSchema",
     "DangerousChange",
     "DangerousChangeType",
     "IntrospectionQuery",
@@ -123,6 +137,7 @@ __all__ = [
     "ResolvedInputField",
     "ResolvedNamedType",
     "ResolvedSchemaElement",
+    "SdlDocument",
     "SafeChange",
     "SafeChangeType",
     "SchemaChange",
@@ -134,6 +149,7 @@ __all__ = [
     "build_client_schema",
     "build_schema",
     "coerce_input_literal",
+    "compose_sdl",
     "coerce_input_value",
     "concat_ast",
     "do_types_overlap",

@@ -197,6 +197,13 @@ from .utilities import (
     extend_schema,
     # Sort a GraphQLSchema.
     lexicographic_sort_schema,
+    # Compose a GraphQLSchema from multiple named SDL documents.
+    SdlDocument,
+    ComposeLocation,
+    ComposeIssue,
+    ComposedSchema,
+    ComposeSdlError,
+    compose_sdl,
     # Print a GraphQLSchema to GraphQL Schema language.
     print_schema,
     # Print a GraphQLType to GraphQL Schema language.
@@ -849,7 +856,12 @@ __all__ = [
     "build_ast_schema",
     "build_client_schema",
     "build_schema",
+    "ComposeIssue",
+    "ComposeLocation",
+    "ComposeSdlError",
+    "ComposedSchema",
     "coerce_input_literal",
+    "compose_sdl",
     "coerce_input_value",
     "concat_ast",
     "create_source_event_stream",
@@ -950,6 +962,7 @@ __all__ = [
     "type_from_ast",
     "validate",
     "validate_input_literal",
+    "SdlDocument",
     "validate_input_value",
     "validate_schema",
     "value_from_ast",

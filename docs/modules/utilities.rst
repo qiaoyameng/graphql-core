@@ -39,6 +39,10 @@ Sort a GraphQLSchema:
 
 .. autofunction:: lexicographic_sort_schema
 
+Compose a GraphQLSchema from multiple named SDL documents:
+
+.. autofunction:: compose_sdl
+
 Print a GraphQLSchema to GraphQL Schema language:
 
 .. autofunction:: print_schema

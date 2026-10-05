@@ -1,0 +1,33 @@
+"""Shared domain types delivered by the platform team."""
+
+directive @tag(name: String!) repeatable on FIELD_DEFINITION | OBJECT
+
+interface Node {
+  id: ID!
+}
+
+"""Media items owned by the catalogue domain."""
+union Media = Book
+
+type Book implements Node {
+  id: ID!
+  title: String!
+}
+
+enum MediaStatus {
+  AVAILABLE
+}
+
+input PageInput {
+  limit: Int = 20
+}
+
+schema {
+  query: Query
+}
+
+type Query {
+  "Looks up a Node by its global id."
+  node(id: ID!): Node
+  media(status: MediaStatus = AVAILABLE, page: PageInput = {limit: 20}): [Media!]!
+}

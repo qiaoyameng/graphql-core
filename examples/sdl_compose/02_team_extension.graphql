@@ -1,0 +1,23 @@
+"""Review team additions: a new media type plus extra fields."""
+
+type Movie implements Node {
+  id: ID!
+  title: String!
+  durationMinutes: Int @tag(name: "review-owned")
+}
+
+extend union Media = Movie
+
+extend enum MediaStatus {
+  ARCHIVED
+}
+
+extend input PageInput {
+  offset: Int = 0
+}
+
+extend type Query {
+  "Review-team wording for the same node(id:) argument shape."
+  node(id: ID!): Node
+  reviews(mediaId: ID!, page: PageInput = {limit: 20}): [String!]!
+}

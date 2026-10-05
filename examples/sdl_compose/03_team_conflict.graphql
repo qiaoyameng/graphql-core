@@ -1,0 +1,7 @@
+# Recommendations team fragment that disagrees on an existing field.
+
+extend type Query {
+  # The platform team types this as [Media!]!; the wrapper types conflict.
+  media(status: MediaStatus = AVAILABLE, page: PageInput = {limit: 20}): Media
+  recommendations(limit: Int = 5): [Media!]!
+}
