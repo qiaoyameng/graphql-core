@@ -74,6 +74,13 @@ from .concat_ast import concat_ast
 # Separate an AST into an AST per Operation.
 from .separate_operations import separate_operations
 
+# Migrate a document to a new schema with renamed fields.
+from .migrate_fields import (
+    FieldMigrationError,
+    FieldMigrationResult,
+    migrate_fields,
+)
+
 # Strip characters that are not significant to the validity or execution
 # of a GraphQL document.
 from .strip_ignored_characters import strip_ignored_characters
@@ -114,6 +121,8 @@ __all__ = [
     "BreakingChangeType",
     "DangerousChange",
     "DangerousChangeType",
+    "FieldMigrationError",
+    "FieldMigrationResult",
     "IntrospectionQuery",
     "ResolvedDirective",
     "ResolvedDirectiveArgument",
@@ -148,6 +157,7 @@ __all__ = [
     "is_equal_type",
     "is_type_sub_type_of",
     "lexicographic_sort_schema",
+    "migrate_fields",
     "print_directive",
     "print_introspection_schema",
     "print_schema",

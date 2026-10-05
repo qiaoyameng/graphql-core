@@ -235,6 +235,9 @@ from .utilities import (
     concat_ast,
     # Separate an AST into an AST per Operation.
     separate_operations,
+    FieldMigrationError,
+    FieldMigrationResult,
+    migrate_fields,
     # Strip characters that are not significant to the validity or execution
     # of a GraphQL document.
     strip_ignored_characters,
@@ -601,6 +604,8 @@ __all__ = [
     "Executor",
     "ExperimentalIncrementalExecutionResults",
     "FieldDefinitionNode",
+    "FieldMigrationError",
+    "FieldMigrationResult",
     "FieldNode",
     "FieldsOnCorrectTypeRule",
     "FloatValueNode",
@@ -924,6 +929,7 @@ __all__ = [
     "located_error",
     "map_async_iterable",
     "map_source_to_response_event",
+    "migrate_fields",
     "parse",
     "parse_const_value",
     "parse_schema_coordinate",
