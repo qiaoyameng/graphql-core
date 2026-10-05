@@ -22,6 +22,15 @@ from .build_ast_schema import build_ast_schema, build_schema
 # Extend an existing GraphQLSchema from a parsed GraphQL Schema language AST.
 from .extend_schema import extend_schema
 
+# Compose multiple SDL documents into a single GraphQLSchema.
+from .compose_sdl import (
+    compose_sdl,
+    SdlCompositionResult,
+    SdlConflict,
+    SdlDescriptionDifference,
+    SdlSourceLocation,
+)
+
 # Sort a GraphQLSchema.
 from .lexicographic_sort_schema import lexicographic_sort_schema
 
@@ -126,6 +135,10 @@ __all__ = [
     "SafeChange",
     "SafeChangeType",
     "SchemaChange",
+    "SdlCompositionResult",
+    "SdlConflict",
+    "SdlDescriptionDifference",
+    "SdlSourceLocation",
     "TypeInfo",
     "TypeInfoVisitor",
     "ast_from_value",
@@ -136,6 +149,7 @@ __all__ = [
     "coerce_input_literal",
     "coerce_input_value",
     "concat_ast",
+    "compose_sdl",
     "do_types_overlap",
     "extend_schema",
     "find_breaking_changes",

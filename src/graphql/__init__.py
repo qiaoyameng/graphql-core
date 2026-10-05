@@ -195,6 +195,12 @@ from .utilities import (
     build_schema,
     # Extend an existing GraphQLSchema from a parsed GraphQL Schema language AST.
     extend_schema,
+    # Compose multiple SDL documents into a single GraphQLSchema.
+    compose_sdl,
+    SdlCompositionResult,
+    SdlConflict,
+    SdlDescriptionDifference,
+    SdlSourceLocation,
     # Sort a GraphQLSchema.
     lexicographic_sort_schema,
     # Print a GraphQLSchema to GraphQL Schema language.
@@ -766,6 +772,10 @@ __all__ = [
     "SchemaDefinitionNode",
     "SchemaExtensionNode",
     "SchemaMetaFieldDef",
+    "SdlCompositionResult",
+    "SdlConflict",
+    "SdlDescriptionDifference",
+    "SdlSourceLocation",
     "SelectionNode",
     "SelectionSetNode",
     "SingleFieldSubscriptionsRule",
@@ -852,6 +862,7 @@ __all__ = [
     "coerce_input_literal",
     "coerce_input_value",
     "concat_ast",
+    "compose_sdl",
     "create_source_event_stream",
     "default_field_resolver",
     "default_harness",

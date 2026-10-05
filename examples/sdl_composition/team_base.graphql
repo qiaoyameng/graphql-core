@@ -1,0 +1,18 @@
+# Shared kernel owned by the platform team: introduces the dependencies
+# (scalar, interface, directive and the query root) that the other teams
+# build upon.
+
+"An ISO-8601 timestamp."
+scalar DateTime
+
+"Marks catalog elements that are synced to the search index."
+directive @indexed(weight: Int = 1) repeatable on OBJECT | FIELD_DEFINITION
+
+"Any object with a stable identity."
+interface Node {
+  id: ID!
+}
+
+type Query {
+  node(id: ID!): Node
+}

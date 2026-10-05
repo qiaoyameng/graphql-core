@@ -1,0 +1,18 @@
+# Billing team: adds invoicing, but its view of Product.price conflicts
+# with the catalog team (Float vs Int).
+
+extend type Query {
+  invoice(id: ID!): Invoice
+}
+
+type Invoice {
+  id: ID!
+  total: Float!
+  issuedAt: DateTime
+}
+
+"A product as seen by billing."
+type Product {
+  "Gross price in major currency units."
+  price: Float
+}

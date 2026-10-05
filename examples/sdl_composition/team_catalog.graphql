@@ -1,0 +1,21 @@
+# Catalog team: contributes fields to the shared types and declares its own.
+
+extend type Query {
+  product(sku: String!): Product
+  search(term: String, limit: Int = 10): [Product!]!
+}
+
+"A sellable product."
+type Product implements Node @indexed(weight: 5) {
+  id: ID!
+  sku: String!
+  title: String
+  "Net price in cents."
+  price: Int
+  listedAt: DateTime
+}
+
+enum Currency {
+  EUR
+  USD
+}
