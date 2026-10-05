@@ -199,6 +199,10 @@ from .utilities import (
     lexicographic_sort_schema,
     # Print a GraphQLSchema to GraphQL Schema language.
     print_schema,
+    # Prune a GraphQLSchema to the parts used by a set of operations.
+    prune_schema,
+    PrunedSchema,
+    PruningReport,
     # Print a GraphQLType to GraphQL Schema language.
     print_type,
     # Print a GraphQLDirective to GraphQL Schema language.
@@ -934,6 +938,9 @@ __all__ = [
     "print_introspection_schema",
     "print_location",
     "print_schema",
+    "prune_schema",
+    "PrunedSchema",
+    "PruningReport",
     "print_source_location",
     "print_type",
     "recommended_rules",

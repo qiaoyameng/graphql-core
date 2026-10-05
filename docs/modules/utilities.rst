@@ -46,6 +46,12 @@ Print a GraphQLSchema to GraphQL Schema language:
 .. autofunction:: print_directive
 .. autofunction:: print_introspection_schema
 
+Prune a GraphQLSchema to the parts used by a set of validated operations:
+
+.. autofunction:: prune_schema
+.. autoclass:: PrunedSchema
+.. autoclass:: PruningReport
+
 Create a GraphQLType from a GraphQL language AST:
 
 .. autofunction:: type_from_ast
