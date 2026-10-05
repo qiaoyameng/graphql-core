@@ -25,6 +25,12 @@ from .types import (
     SubsequentIncrementalExecutionResult,
 )
 from .middleware import MiddlewareManager
+from .validate_response import (
+    ResponseIssueKind,
+    ResponseValidationIssue,
+    ResponseValidationResult,
+    validate_response,
+)
 from .values import (
     get_argument_values,
     get_directive_values,
@@ -71,6 +77,9 @@ __all__ = [
     "Middleware",
     "MiddlewareManager",
     "PendingResult",
+    "ResponseIssueKind",
+    "ResponseValidationIssue",
+    "ResponseValidationResult",
     "RootSelectionSetExecutor",
     "SubsequentIncrementalExecutionResult",
     "VariableValues",
@@ -88,4 +97,5 @@ __all__ = [
     "map_async_iterable",
     "map_source_to_response_event",
     "subscribe",
+    "validate_response",
 ]

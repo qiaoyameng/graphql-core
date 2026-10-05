@@ -89,3 +89,13 @@ Execution
 .. autofunction:: get_variable_values
 
 .. autoclass:: VariableValues
+
+.. autofunction:: validate_response
+
+.. autoclass:: ResponseValidationResult
+   :members:
+
+.. autoclass:: ResponseValidationIssue
+
+.. autoclass:: ResponseIssueKind
+   :members:
