@@ -169,6 +169,9 @@ ignore = [
 "src/graphql/utilities/type_info.py" = [
     "D102",  # allow missing method docstrings
 ]
+"src/graphql/utilities/prune_schema.py" = [
+    "D102",  # allow missing method docstrings
+]
 "src/graphql/validation/rules/*" = [
     "D102",  # allow missing method docstrings
 ]

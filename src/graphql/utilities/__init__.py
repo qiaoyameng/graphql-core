@@ -25,6 +25,9 @@ from .extend_schema import extend_schema
 # Sort a GraphQLSchema.
 from .lexicographic_sort_schema import lexicographic_sort_schema
 
+# Prune a GraphQLSchema to the parts used by a set of operations.
+from .prune_schema import PrunedSchema, PruneSchemaReport, prune_schema
+
 # Print a GraphQLSchema to GraphQL Schema language.
 from .print_schema import (
     print_schema,
@@ -115,6 +118,8 @@ __all__ = [
     "DangerousChange",
     "DangerousChangeType",
     "IntrospectionQuery",
+    "PrunedSchema",
+    "PruneSchemaReport",
     "ResolvedDirective",
     "ResolvedDirectiveArgument",
     "ResolvedEnumValue",

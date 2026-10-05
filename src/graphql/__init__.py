@@ -197,6 +197,10 @@ from .utilities import (
     extend_schema,
     # Sort a GraphQLSchema.
     lexicographic_sort_schema,
+    # Prune a GraphQLSchema to the parts used by a set of operations.
+    prune_schema,
+    PrunedSchema,
+    PruneSchemaReport,
     # Print a GraphQLSchema to GraphQL Schema language.
     print_schema,
     # Print a GraphQLType to GraphQL Schema language.
@@ -744,6 +748,8 @@ __all__ = [
     "ParallelVisitor",
     "PossibleFragmentSpreadsRule",
     "PossibleTypeExtensionsRule",
+    "PrunedSchema",
+    "PruneSchemaReport",
     "ProvidedRequiredArgumentsRule",
     "ResolvedDirective",
     "ResolvedDirectiveArgument",
@@ -936,6 +942,7 @@ __all__ = [
     "print_schema",
     "print_source_location",
     "print_type",
+    "prune_schema",
     "recommended_rules",
     "replace_variables",
     "resolve_ast_schema_coordinate",

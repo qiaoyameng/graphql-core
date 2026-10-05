@@ -39,6 +39,12 @@ Sort a GraphQLSchema:
 
 .. autofunction:: lexicographic_sort_schema
 
+Prune a GraphQLSchema to the parts used by a set of operations:
+
+.. autofunction:: prune_schema
+.. autoclass:: PrunedSchema
+.. autoclass:: PruneSchemaReport
+
 Print a GraphQLSchema to GraphQL Schema language:
 
 .. autofunction:: print_schema
