@@ -541,6 +541,15 @@ from .harness import (
     default_harness,
 )
 
+# Validate recorded responses against schema, query and variables.
+from .response_validation import (
+    ResponseValidationIssue,
+    ResponseValidationIssueKind,
+    ResponseValidationReport,
+    ScalarOutputChecker,
+    validate_response,
+)
+
 INVALID = Undefined  # deprecated alias
 
 # The GraphQL-core version info.
@@ -951,7 +960,12 @@ __all__ = [
     "validate",
     "validate_input_literal",
     "validate_input_value",
+    "validate_response",
     "validate_schema",
+    "ResponseValidationIssue",
+    "ResponseValidationIssueKind",
+    "ResponseValidationReport",
+    "ScalarOutputChecker",
     "value_from_ast",
     "value_from_ast_untyped",
     "value_to_literal",
