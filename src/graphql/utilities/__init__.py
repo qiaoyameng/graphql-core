@@ -95,6 +95,13 @@ from .find_schema_changes import (
     find_schema_changes,
 )
 
+# Migrate an executable document from one schema to another.
+from .migrate_query_document import (
+    FieldCoordinate,
+    QueryMigrationResult,
+    migrate_query_document,
+)
+
 # Resolve a schema coordinate to a schema element.
 from .resolve_schema_coordinate import (
     resolve_schema_coordinate,
@@ -114,7 +121,9 @@ __all__ = [
     "BreakingChangeType",
     "DangerousChange",
     "DangerousChangeType",
+    "FieldCoordinate",
     "IntrospectionQuery",
+    "QueryMigrationResult",
     "ResolvedDirective",
     "ResolvedDirectiveArgument",
     "ResolvedEnumValue",
@@ -148,6 +157,7 @@ __all__ = [
     "is_equal_type",
     "is_type_sub_type_of",
     "lexicographic_sort_schema",
+    "migrate_query_document",
     "print_directive",
     "print_introspection_schema",
     "print_schema",
